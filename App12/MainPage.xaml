@@ -1,0 +1,32 @@
+﻿<Page
+    x:Class="App12.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:Maps="using:Windows.UI.Xaml.Controls.Maps"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="using:App12"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+    <Page.Resources>
+        <local:HTMLConverter x:Key="HTMLFormatConverter" />
+    </Page.Resources>
+
+    <StackPanel Name="st" Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <FlipView x:Name="flipView1">
+            <!--<Image Source="Assets/Logo.png" />
+            <Image Source="Assets/SplashScreen.png" />
+            <Image Source="Assets/SmallLogo.png" />-->
+            <TextBlock x:Name="tex" Text="content" />
+
+            <TextBlock x:Name="txtTitle" Text="{x:Bind Title, Converter={StaticResource HTMLFormatConverter}, Mode=OneWay}" />
+        </FlipView>
+        <!--<Button Click="Button_Click" Content="LOCATION" />-->
+        <!--<Maps:MapControl
+            x:Name="MapControl1"
+            Width="{Binding ActualWidth, ElementName=st}"
+            Height="{Binding ActualHeight, ElementName=st}"
+            MapServiceToken="EnterYourAuthenticationKeyHere"
+            TiltInteractionMode="GestureAndControl"
+            ZoomInteractionMode="GestureAndControl" />-->
+    </StackPanel>
+</Page>
